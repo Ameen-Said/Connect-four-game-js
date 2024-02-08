@@ -1,0 +1,113 @@
+body{
+ background-image: url("https://t3.ftcdn.net/jpg/03/23/88/08/360_F_323880864_TPsH5ropjEBo1ViILJmcFHJqsBzorxUB.jpg");
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+  position: absolute;
+  width: 930px;
+  height: px;
+  top: 50%;
+  left: 50%;
+  margin-left: -460px;
+  margin-top: -280px;
+  background-color: rgba(0, 0, 0, 0.538);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 15px;
+}
+
+.columns{
+  display: grid;
+  grid-template-columns: 80px;
+  row-gap: 10px;
+}
+
+.cell{
+  width: 50px;
+  height: 50px;
+ background-color: rgba(252, 252, 252, 0.844);
+ border: 2px black solid;
+ border-radius: 80px;
+ box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 15px;
+}
+
+.Red{
+  background-color: rgba(146, 5, 5, 1);
+}
+
+.Blue{
+  background-color: rgba(5, 73, 146, 1);
+}
+
+.gameInfo{
+  background-color: rgba(0, 0, 0, 0.367);
+  margin-top: 68px;
+  margin-left: 20px;
+  width: 200px;
+  height: 120px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 15px;
+  text-align: center;
+}
+
+.player{
+  font-size: 50px;
+  color:#FF9F29;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.winner{
+  font-size: 100px;
+  color:#FF9F29;
+  font-style: italic;
+  text-shadow: #000000 10px 10px 5px;
+ -webkit-text-stroke-width: 2px;
+ -webkit-text-stroke-color: #000000;
+  font-family: 'Bebas Neue', sans-serif;
+  position: relative;
+  top:50px;
+  
+}
+
+.playAgain{
+  font-size: 40px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 1);
+  padding: 15px;
+  border-radius: 50px;
+  box-shadow: rgba(227, 197, 76, 0.8) 0px 5px 15px;
+ -webkit-text-stroke-width: 2px;
+ -webkit-text-stroke-color: #000000;
+  font-family: 'Bebas Neue', sans-serif;
+  position: relative;
+  top:140px;
+  border: #ffffff solid 3px;
+}
+
+.plays{
+  font-size: 50px;
+  color:#FF9F29;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.playAgain:hover{
+  background-color: rgba(255, 255, 255, 1);
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke-width: 0px;
+  border: #000000 solid 3px;
+}
+
+.result{
+  position: absolute;
+  height: 400px;
+  width: 600px;
+  border-radius: 20px;
+  top:50%;
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -200px;
+  text-align: center;
+}

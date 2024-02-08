@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+<link rel="icon" type="image/x-icon" href="icon.svg">
+        <title>Connect game</title>
+
+    </head>
+    <body>
+        <div class="gameInfo"><span class="player"> Red Turn </span> <br> <span class="plays">Plays: 0</span> </div>
+
+        <div class="container">
+            <div class="columns" column="1">
+                <div class="cell r1" fill="no" id="col1r1" row="1"></div>
+                <div class="cell r2" fill="no" id="col1r2" row="2"></div>
+                <div class="cell r3" fill="no" id="col1r3" row="3"></div>
+                <div class="cell r4" fill="no" id="col1r4" row="4"></div>
+                <div class="cell r5" fill="no" id="col1r5" row="5"></div>
+                <div class="cell r6" fill="no" id="col1r6" row="6"></div>
+                <div class="cell r7" fill="no" id="col1r7" row="7"></div>
+                <div class="cell r8" fill="no" id="col1r8" row="8"></div>
+            </div>
+
+            <div class="columns" column="2">
+                <div class="cell r1" fill="no" id="col2r1" row="5"></div>
+                <div class="cell r2" fill="no" id="col2r2" row="4"></div>
+                <div class="cell r3" fill="no" id="col2r3" row="6"></div>
+                <div class="cell r4" fill="no" id="col2r4" row="1"></div>
+                <div class="cell r5" fill="no" id="col2r5" row="7"></div>
+                <div class="cell r6" fill="no" id="col2r6" row="3"></div>
+                <div class="cell r7" fill="no" id="col2r7" row="8"></div>
+                <div class="cell r8" fill="no" id="col2r8" row="2"></div>
+            </div>
+
+            <div class="columns" column="3">
+                <div class="cell r1" fill="no" id="col3r1" row="5"></div>
+                <div class="cell r2" fill="no" id="col3r2" row="4"></div>
+                <div class="cell r3" fill="no" id="col3r3" row="6"></div>
+                <div class="cell r4" fill="no" id="col3r4" row="1"></div>
+                <div class="cell r5" fill="no" id="col3r5" row="7"></div>
+                <div class="cell r6" fill="no" id="col3r6" row="3"></div>
+                <div class="cell r7" fill="no" id="col3r7" row="8"></div>
+                <div class="cell r8" fill="no" id="col3r8" row="2"></div>
+            </div>
+
+            <div class="columns" column="4">
+                <div class="cell r1" fill="no" id="col4r1" row="1"></div>
+                <div class="cell r2" fill="no" id="col4r2" row="2"></div>
+                <div class="cell r3" fill="no" id="col4r3" row="3"></div>
+                <div class="cell r4" fill="no" id="col4r4" row="4"></div>
+                <div class="cell r5" fill="no" id="col4r5" row="5"></div>
+                <div class="cell r6" fill="no" id="col4r6" row="6"></div>
+                <div class="cell r7" fill="no" id="col4r7" row="7"></div>
+                <div class="cell r8" fill="no" id="col4r8" row="8"></div>
+            </div>
+
+            <div class="columns" column="5">
+                <div class="cell r1" fill="no" id="col5r1" row="1"></div>
+                <div class="cell r2" fill="no" id="col5r2" row="2"></div>
+                <div class="cell r3" fill="no" id="col5r3" row="3"></div>
+                <div class="cell r4" fill="no" id="col5r4" row="4"></div>
+                <div class="cell r5" fill="no" id="col5r5" row="5"></div>
+                <div class="cell r6" fill="no" id="col5r6" row="6"></div>
+                <div class="cell r7" fill="no" id="col5r7" row="7"></div>
+                <div class="cell r8" fill="no" id="col5r8" row="8"></div>
+            </div>
+            <div class="columns" column="6">
+                <div class="cell r1" fill="no" id="col6r1" row="1"></div>
+                <div class="cell r2" fill="no" id="col6r2" row="2"></div>
+                <div class="cell r3" fill="no" id="col6r3" row="3"></div>
+                <div class="cell r4" fill="no" id="col6r4" row="4"></div>
+                <div class="cell r5" fill="no" id="col6r5" row="5"></div>
+                <div class="cell r6" fill="no" id="col6r6" row="6"></div>
+                <div class="cell r7" fill="no" id="col6r7" row="7"></div>
+                <div class="cell r8" fill="no" id="col6r8" row="8"></div>
+            </div>
+
+            <div class="columns" column="7">
+                <div class="cell r1" fill="no" id="col7r1" row="1"></div>
+                <div class="cell r2" fill="no" id="col7r2" row="2"></div>
+                <div class="cell r3" fill="no" id="col7r3" row="3"></div>
+                <div class="cell r4" fill="no" id="col7r4" row="4"></div>
+                <div class="cell r5" fill="no" id="col7r5" row="5"></div>
+                <div class="cell r6" fill="no" id="col7r6" row="6"></div>
+                <div class="cell r7" fill="no" id="col7r7" row="7"></div>
+                <div class="cell r8" fill="no" id="col7r8" row="8"></div>
+            </div>
+
+            <div class="columns" column="8">
+                <div class="cell r1" fill="no" id="col8r1" row="1"></div>
+                <div class="cell r2" fill="no" id="col8r2" row="2"></div>
+                <div class="cell r3" fill="no" id="col8r3" row="3"></div>
+                <div class="cell r4" fill="no" id="col8r4" row="4"></div>
+                <div class="cell r5" fill="no" id="col8r5" row="5"></div>
+                <div class="cell r6" fill="no" id="col8r6" row="6"></div>
+                <div class="cell r7" fill="no" id="col8r7" row="7"></div>
+                <div class="cell r8" fill="no" id="col8r8" row="8"></div>
+            </div>
+            <div class="columns" column="9">
+                <div class="cell r1" fill="no" id="col9r1" row="1"></div>
+                <div class="cell r2" fill="no" id="col9r2" row="2"></div>
+                <div class="cell r3" fill="no" id="col9r3" row="3"></div>
+                <div class="cell r4" fill="no" id="col9r4" row="4"></div>
+                <div class="cell r5" fill="no" id="col9r5" row="5"></div>
+                <div class="cell r6" fill="no" id="col9r6" row="6"></div>
+                <div class="cell r7" fill="no" id="col9r7" row="7"></div>
+                <div class="cell r8" fill="no" id="col9r8" row="8"></div>
+            </div>
+            <div class="columns" column="10">
+                <div class="cell r1" fill="no" id="col10r1" row="1"></div>
+                <div class="cell r2" fill="no" id="col10r2" row="2"></div>
+                <div class="cell r3" fill="no" id="col10r3" row="3"></div>
+                <div class="cell r4" fill="no" id="col10r4" row="4"></div>
+                <div class="cell r5" fill="no" id="col10r5" row="5"></div>
+                <div class="cell r6" fill="no" id="col10r6" row="6"></div>
+                <div class="cell r7" fill="no" id="col10r7" row="7"></div>
+                <div class="cell r8" fill="no" id="col10r8" row="8"></div>
+            </div>
+            <div class="columns" column="11">
+                <div class="cell r1" fill="no" id="col11r1" row="1"></div>
+                <div class="cell r2" fill="no" id="col11r2" row="2"></div>
+                <div class="cell r3" fill="no" id="col11r3" row="3"></div>
+                <div class="cell r4" fill="no" id="col11r4" row="4"></div>
+                <div class="cell r5" fill="no" id="col11r5" row="5"></div>
+                <div class="cell r6" fill="no" id="col11r6" row="6"></div>
+                <div class="cell r7" fill="no" id="col11r7" row="7"></div>
+                <div class="cell r8" fill="no" id="col11r8" row="8"></div>
+            </div>
+            <div class="columns" column="12">
+                <div class="cell r1" fill="no" id="col12r1" row="1"></div>
+                <div class="cell r2" fill="no" id="col12r2" row="2"></div>
+                <div class="cell r3" fill="no" id="col12r3" row="3"></div>
+                <div class="cell r4" fill="no" id="col12r4" row="4"></div>
+                <div class="cell r5" fill="no" id="col12r5" row="5"></div>
+                <div class="cell r6" fill="no" id="col12r6" row="6"></div>
+                <div class="cell r7" fill="no" id="col12r7" row="7"></div>
+                <div class="cell r8" fill="no" id="col12r8" row="8"></div>
+            </div>
+
+        </div>
+ <script>
+    // declaring variables
+    let playsNum = 0;
+    let currentPlayer = "Red";
+    let num = 8 ;
+    let result = false;
+    
+    $(".columns").click(function(){ // call this function when click on div
+
+        if(result == true){ return; } // if the game end, exit the function
+
+        let column = $(this).attr("column");// get the column number
+        let index = num;
+        for(let i = 8; i>0 ; i--){
+
+         
+        let value = "r" +index;
+        let selected =  this.querySelector(`.${value}`);
+        let status = $(selected).attr("fill");
+
+        if(status == "no"){
+            $(selected).addClass(currentPlayer);
+            $(selected).attr("fill",currentPlayer);
+            playsNum = playsNum + 1;
+            $(".plays").text("Plays: " +playsNum);
+           if(playsNum >= 7){
+            let row = $(selected).attr("row");
+            result = checkWin(column,row,currentPlayer);
+           
+           if(result == true || playsNum == 96){
+            $("body").append(`<div class='result'><span class='winner'>Winner is ${currentPlayer}  </span> <br> <span class='playAgain' onclick="playAgain()">Play Again</span></div> '> `)
+           }
+            
+           }
+         
+       if(currentPlayer == "Red"){
+        currentPlayer = "Blue";
+       }
+       else{
+        currentPlayer = "Red";
+       }
+       $(".player").text("");
+       $(".player").append(currentPlayer + " Turn");
+            return;
+        }
+         index = index-1;
+         
+        }
+    
+    })
+
+    
+    function checkWin(col,rw,cp){ // checks all wining conditions
+        let verticalWin = checkVertical(col,rw,cp); // check the vertical wining conditions
+        let horizontalWin = checkHorizontal(col,rw,cp); // check the horizontal wining conditions
+        let diagonalWin = checkDiagonal(col,rw,cp); // check the diagonal wining conditions
+        if(verticalWin == true || horizontalWin == true || diagonalWin == true){
+            return true;
+        }
+    }
+
+
+    function checkHorizontal(col,rw,cp){
+        let currentCol = parseInt(col);
+        let currentRow = parseInt(rw);
+        
+        
+       
+        
+        for(let i = 3; i > 0; i--){ // Found 3 cell on the left
+            
+                 
+                let leftCol = currentCol - 1 ;
+                let leftCellId = "#col" + leftCol + "r" + currentRow;
+                let leftCell =document.querySelector(leftCellId);
+                let checkLeft = $(leftCell).attr("fill");
+                currentCol = currentCol -1;
+                if((i == 2 || i == 3) && (((checkLeft == "no")) || (!(checkLeft == cp))))
+                {
+                   
+                    break;
+                }
+                if(i == 1 && checkLeft == cp ){
+                    return true;
+                }
+        }
+
+        currentCol = parseInt(col);
+
+        for(let i = 0; i < 1; i++){ //  Found 1 cell on the left and 2 on the right
+              
+           let leftCol = currentCol - 1 ;
+            let leftCellId = "#col" + leftCol + "r" + currentRow;
+            let leftCell =document.querySelector(leftCellId);
+            let checkLeft = $(leftCell).attr("fill");
+           
+            if(checkLeft == cp){
+                for(let j = 2; j > 0; j--){
+                   
+                    let rightCol = currentCol +1;
+                    let rightCellId = "#col" + rightCol + "r" + currentRow;
+                    let rightCell = document.querySelector(rightCellId);
+                    let checkRight = $(rightCell).attr("fill");
+                    currentCol = currentCol +1;
+                 
+                    if((j == 2 || j == 1) && (((!(checkRight == cp)) || (checkRight == "no")))){
+
+                        break;
+                    }
+                    if(j == 1 && checkRight == cp){
+                     
+                        return true;
+                    }
+                }
+                break;
+            }
+    }
+
+
+    currentCol = parseInt(col);
+      
+    
+        
+       for(let i = 3; i > 0; i--){ // Found 3 cell on the right
+            
+                 
+                let rightCol = currentCol + 1 ;
+                let rightCellId = "#col" + rightCol + "r" + currentRow;
+                let rightCell =document.querySelector(rightCellId);
+                let checkRight = $(rightCell).attr("fill");
+                currentCol = currentCol +1;
+                if((i == 2 || i == 3) && (((checkRight == "no")) || (!(checkRight == cp))))
+                {
+                   
+                    break;
+                }
+                if(i == 1 && checkRight == cp ){
+             
+                    return true;
+                }
+        }
+
+        currentCol = parseInt(col);
+
+        
+        for(let i = 0; i < 1; i++){ //  Found 1 cell on the right and 2 on the left
+              
+              let rightCol= currentCol + 1 ;
+               let rightCellId = "#col" + rightCol + "r" + currentRow;
+               let rightCell =document.querySelector(rightCellId);
+               let checkRight = $(rightCell).attr("fill");
+              
+               if(checkRight == cp){
+                   for(let j = 2; j > 0; j--){
+                      
+                       let leftCol = currentCol -1;
+                       let leftCellId = "#col" + leftCol + "r" + currentRow;
+                       let leftCell = document.querySelector(leftCellId);
+                       let checkLeft = $(leftCell).attr("fill");
+                       currentCol = currentCol -1;
+                    
+                       if((j == 2 || j == 1) && (((!(checkLeft == cp)) || (checkLeft == "no")))){
+                           currentCol = parseInt(col);
+                           break;
+                       }
+                       if(j == 1 && checkLeft == cp){
+                        
+                           return true;
+                       }
+                   }
+                   return false;
+               }
+       }
+
+    }
+
+
+
+
+   function checkVertical(col,rw,cp){// check vertical wining condition
+                                    // cp stands for current player
+
+        let currentCol = parseInt(col); // current column index
+        let currentRow = parseInt(rw); // current row index
+
+        for(let i = 3 ; i>0 ; i--){ // check if the bottom cell has the same current player's color
+            
+                let bottomRow = currentRow + 1; // bottom row index
+                let bottomCellId = "#col" + currentCol + "r" + bottomRow; // bottom cell id
+                let bottomCell =document.querySelector(bottomCellId); // bottom cell
+                
+                let check = $(bottomCell).attr("fill"); // bottom cell status (blue / red)
+                if(!(check == cp)){ // break the loop if bottom cell color != current player's color
+                    break;
+                }
+                currentRow = currentRow + 1; // row index increment to check other bottom cells
+        
+            if(i == 1) {return true}; // if all 3 bottom cell's color = current player's color return true
+            }
+
+     return false;
+
+
+    }
+
+    function checkDiagonal(col, row, cp) {
+    let currentCol = parseInt(col); // Current column index
+    let currentRow = parseInt(row); // Current row index
+
+    // Function to check diagonal win in a specific direction
+    function checkDirection(dx, dy) {
+        let count = 0;
+        let nextCol, nextRow;
+        for (let i = 1; i < 5; i++) {
+            nextCol = currentCol + (i * dx);
+            nextRow = currentRow + (i * dy);
+            if (nextCol >= 1 && nextCol <= 12 && nextRow >= 1 && nextRow <= 8) {
+                let diagonalCellId = "#col" + nextCol + "r" + nextRow;
+                let diagonalCell = document.querySelector(diagonalCellId);
+                let check = $(diagonalCell).attr("fill");
+                if (check == cp) {
+                    count++;
+                } else {
+                    break;
+                }
+            } else {
+                break;
+            }
+        }
+        return count;
+    }
+
+    // Check diagonal win in both directions
+    let count1 = checkDirection(-1, 1) + checkDirection(1, -1); // Up-left & Down-right
+    let count2 = checkDirection(1, 1) + checkDirection(-1, -1); // Up-right & Down-left
+
+    // If either count is 3 or more, return true (indicating a win)
+    if (count1 >= 3 || count2 >= 3) {
+        return true;
+    }
+
+    return false;
+}
+
+
+function playAgain() {
+    // Reset all cells to initial state
+    $(".cell").removeClass("Red Blue").attr("fill", "no");
+
+    // Reset game variables
+    playsNum = 0;
+    $(".plays").text("Plays: 0");
+    currentPlayer = "Red";
+    result = false;
+
+    // Update player turn display
+    $(".player").text(currentPlayer + " Turn");
+
+    // Remove the result message if it exists
+    $(".result").remove();
+}
+
+  
+    
+    </script>
+
+    </body>
+</html>
